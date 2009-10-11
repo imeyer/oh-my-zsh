@@ -6,7 +6,15 @@ h2. Setup
 
 h3. The automatic installer... (do you trust me?)
 
-@wget http://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh@
+If by the off chance your network blocks git://, you can provide the -p http option to the installer to clone via http.
+
+For systems missing wget (OS X):
+
+@sh -c "$(curl -s http://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh)" install.sh [-p protocol]@
+
+Using wget:
+
+@sh -c "$(wget -O - http://github.com/imeyer/oh-my-zsh/raw/master/tools/install.sh)" install.sh [-p protocol]@
 
 h3. The manual way
 

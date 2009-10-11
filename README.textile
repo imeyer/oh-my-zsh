@@ -6,15 +6,23 @@ h2. Setup
 
 h3. The automatic installer... (do you trust me?)
 
-If by the off chance your network blocks git://, you can provide the -p http option to the installer to clone via http.
+If your network blocks git://, you can provide the -p http option to the installer to clone via http.
 
-For systems missing wget (OS X):
+For systems missing wget (OS X) via http://:
 
-@sh -c "$(curl -s http://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh)" install.sh [-p protocol]@
+@sh -c "$(curl -s http://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh)" install.sh -p http@
 
-Using wget:
+For systems missing wget (OS X) via git://:
 
-@sh -c "$(wget -O - http://github.com/imeyer/oh-my-zsh/raw/master/tools/install.sh)" install.sh [-p protocol]@
+@sh -c "$(curl -s http://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh)" install.sh@
+
+Using wget via http://:
+
+@sh -c "$(wget -O - http://github.com/imeyer/oh-my-zsh/raw/master/tools/install.sh)" install.sh -p http@
+
+Using wget via git://:
+
+@sh -c "$(wget -O - http://github.com/imeyer/oh-my-zsh/raw/master/tools/install.sh)" install.sh@
 
 h3. The manual way
 

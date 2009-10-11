@@ -20,8 +20,7 @@ then
   echo "You already have Oh My Zsh installed. You'll need to remove ~/.oh-my-zsh if you want to install"
   exit
 else
-  echo "Cloning Oh My Zsh..."
-  echo "/usr/bin/env git clone ${protocol}://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh"
+  echo "Cloning Oh My Zsh using ${protocol}://..."
   /usr/bin/env git clone ${protocol}://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 fi
 

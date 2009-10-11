@@ -21,6 +21,7 @@ then
   exit
 else
   echo "Cloning Oh My Zsh..."
+  echo "/usr/bin/env git clone ${protocol}://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh"
   /usr/bin/env git clone ${protocol}://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 fi
 

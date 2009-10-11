@@ -1,5 +1,22 @@
 # Allow ability to specify a protocol for git in the event git:// is 
 # firewalled and/or any other reason you may have.
+
+# Is git installed?
+which git &>/dev/null
+if [ $? -gt 0 ]
+then
+  echo "Seems that you don't have git installed."
+  exit 1
+fi
+
+# Is zsh installed?
+which zsh &>/dev/null
+if [ $? -gt 0 ]
+then
+  echo "Seems that you don't have zsh installed."
+  exit 1
+fi
+
 while getopts ":p:" OPTION
 do
   case $OPTION in
